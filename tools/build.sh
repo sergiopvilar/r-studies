@@ -9,7 +9,7 @@ for filename in $files; do
     if [[ $filename != *"tools/"* ]]; then
         if [[ $filename != *"README"* ]]; then
             output="${filename##*/}"
-            pandoc --template=./tools/eisvogel.latex  --listings $filename -o "./${output%.md}.pdf"
+            pandoc --template=./tools/eisvogel.latex -f markdown-implicit_figures -t pdf  --listings $filename -o "./${output%.md}.pdf"
         fi
     fi
 done

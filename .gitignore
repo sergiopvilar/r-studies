@@ -1,4 +1,4 @@
 *.zip
-*.pdf
+/*.pdf
 *.RData
 *.Rhistory
